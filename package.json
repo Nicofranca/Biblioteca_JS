@@ -12,6 +12,7 @@
     "vite": "^5.1.6"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "prompt-sync": "^4.2.0"
   }
 }

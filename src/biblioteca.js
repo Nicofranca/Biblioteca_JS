@@ -1,4 +1,7 @@
-let catologo = [];
+const prompt = require("prompt-sync")();
+
+const catologo = [];
+let i = 1;
 
 function adicionarLivro(titulo, autor, ano_publicacao, genero, disponibilidade) {
   let novoLivro = {
@@ -6,7 +9,8 @@ function adicionarLivro(titulo, autor, ano_publicacao, genero, disponibilidade) 
     autor: autor,
     ano_publicacao: ano_publicacao,
     genero: genero,
-    disponibilidade: "disponivel"
+    disponibilidade: "disponivel",
+    id: id + i
   }
 
   catologo.push(novoLivro);
@@ -18,12 +22,19 @@ function adicionarLivro(titulo, autor, ano_publicacao, genero, disponibilidade) 
 
 function listarLivro(){
   catologo.forEach(livro => {
-    console.log(`Titulo: ${livro.titulo} - Autor: ${livro.autor} - Ano Publicacao: ${livro.ano_publicacao} - Genero: ${livro.genero} - Disponibilidade: ${livro.disponibilidade}`);
+    console.log(`ID: ${livro.id} Titulo: ${livro.titulo} - Autor: ${livro.autor} - Ano Publicacao: ${livro.ano_publicacao} - Genero: ${livro.genero} - Disponibilidade: ${livro.disponibilidade}`);
   })
 }
 
-function buscarLivro(){
-  
+function buscarLivro(titulo){
+  const tituloPequeno = titulo.toLowerCase();
+  let livroEncontrado = catologo.find(livro => {
+    if(livro.titulo.toLowerCase() === tituloPequeno){
+      return console.log(`ID: ${livro.id} Titulo: ${livro.titulo} - Autor: ${livro.autor} - Ano Publicacao: ${livro.ano_publicacao} - Genero: ${livro.genero} - Disponibilidade: ${livro.disponibilidade}`);
+    }
+  })
+
+  return livroEncontrado
 }
 
 function editarLivro(){
