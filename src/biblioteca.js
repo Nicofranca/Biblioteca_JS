@@ -10,7 +10,7 @@ function adicionarLivro(titulo, autor, ano_publicacao, genero, disponibilidade) 
     ano_publicacao: ano_publicacao,
     genero: genero,
     disponibilidade: "disponivel",
-    id: id + i
+    id: i++
   }
 
   catologo.push(novoLivro);

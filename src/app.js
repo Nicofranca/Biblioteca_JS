@@ -2,10 +2,11 @@ const prompt = require("prompt-sync")();
 
 const biblioteca = require('./biblioteca.js');
 
-const adicionar = biblioteca.adicionarLivro("360", "Alguem", 2025, "Ficcao", "Indisponivel");
+biblioteca.adicionarLivro("360", "Alguem", 2025, "Ficcao", "Indisponivel");
+biblioteca.adicionarLivro("teste", "Alguem", 2025, "Ficcao", "Indisponivel");
 
-const listar = biblioteca.listarLivro();
+biblioteca.listarLivro();
 
-let buscarTitulo = prompt("Insira o titulo do livro: ");
+let buscarTitulo = prompt("\nInsira o titulo do livro: ");
 
 console.log(biblioteca.buscarLivro(buscarTitulo));
