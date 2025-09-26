@@ -37,8 +37,17 @@ function buscarLivro(titulo){
   return livroEncontrado
 }
 
-function editarLivro(){
+function editarLivro(id, titulo, autor, ano_publicacao, genero, disponibilidade){
+  let livroEditar = catologo.find(livro => livro.id === id);
+  if(livroEditar){
+    livroEditar.titulo = titulo,
+    livroEditar.autor = autor,
+    livroEditar.ano_publicacao = ano_publicacao,
+    livroEditar.genero = genero,
+    livroEditar.disponibilidade = disponibilidade
+  }
 
+  return livroEditar;
 }
 
 function removerLivro(){
