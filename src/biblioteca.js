@@ -9,7 +9,7 @@ function adicionarLivro(titulo, autor, ano_publicacao, genero, disponibilidade) 
     autor: autor,
     ano_publicacao: ano_publicacao,
     genero: genero,
-    disponibilidade: "disponivel",
+    disponibilidade: disponibilidade,
     id: i++
   }
 
@@ -50,8 +50,13 @@ function editarLivro(id, titulo, autor, ano_publicacao, genero, disponibilidade)
   return livroEditar;
 }
 
-function disponibilidade(){
+function alterarDisponibilidade(id, disponibilidade){
+  let livroEditar = catologo.find(livro => livro.id === id);
+  if(livroEditar){
+    livroEditar.disponibilidade = disponibilidade;
+  }
 
+  return console.log(livroEditar)
 }
 
 function removerLivro(id){
@@ -65,7 +70,7 @@ module.exports = {
   buscarLivro,
   editarLivro,
   removerLivro,
-  disponibilidade
+  alterarDisponibilidade
 }
 
 

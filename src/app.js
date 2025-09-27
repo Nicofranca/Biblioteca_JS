@@ -56,7 +56,9 @@ let laco = true;
                 break;
 
             case 4: 
-                
+                let buscarIdDisponibilidade = prompt("Insira o ID: ");
+                let disponibilidade = prompt("Insira a disponivbilidade: ")
+                biblioteca.alterarDisponibilidade(buscarIdDisponibilidade, disponibilidade);
                 break;
 
             case 5: 
