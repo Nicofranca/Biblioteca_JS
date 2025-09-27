@@ -50,12 +50,13 @@ function editarLivro(id, titulo, autor, ano_publicacao, genero, disponibilidade)
   return livroEditar;
 }
 
-function removerLivro(){
+function disponibilidade(){
 
 }
 
-function disponibilidade(){
-
+function removerLivro(id){
+  let livroRemovido = catologo.splice((id -1), 1)
+  return console.log(livroRemovido);
 }
 
 module.exports = {

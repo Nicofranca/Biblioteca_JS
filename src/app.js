@@ -54,6 +54,17 @@ let laco = true;
     
                 biblioteca.editarLivro(buscarID, novoTitulo, novoAutor, novoAnoPublicacao, novoGenero, novoDisponibilidade);
                 break;
+
+            case 4: 
+                
+                break;
+
+            case 5: 
+                let removerID = parseFloat(prompt("Insira o id do livro a ser removido: "))
+                biblioteca.removerLivro(removerID)
+                break;
+
+            
             
             case 0:
                 return laco = false;
